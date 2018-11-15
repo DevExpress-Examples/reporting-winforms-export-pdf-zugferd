@@ -1,3 +1,10 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Form1.cs](./CS/ZUGFeRD_sample/Form1.cs) (VB: [Form1.vb](./VB/ZUGFeRD_sample/Form1.vb))
+* [Program.cs](./CS/ZUGFeRD_sample/Program.cs) (VB: [Program.vb](./VB/ZUGFeRD_sample/Program.vb))
+* [XtraReport1.cs](./CS/ZUGFeRD_sample/XtraReport1.cs) (VB: [XtraReport1.vb](./VB/ZUGFeRD_sample/XtraReport1.vb))
+<!-- default file list end -->
 # How to export a report to ZUGFeRD
 
 
