@@ -39,10 +39,10 @@
             ' 
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6F, 13F)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.ClientSize = New System.Drawing.Size(284, 262)
+            Me.ClientSize = New System.Drawing.Size(292, 172)
             Me.Controls.Add(Me.button1)
             Me.Name = "Form1"
-            Me.Text = "Form1"
+            Me.Text = "ZUGFeRD Report Example"
             Me.ResumeLayout(False)
 
         End Sub
