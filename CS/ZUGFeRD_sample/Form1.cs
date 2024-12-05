@@ -12,7 +12,7 @@ namespace ZUGFeRD_sample {
 
         private void button1_Click(object sender, EventArgs e) {
             var report = new XtraReport1();
-            report.XmlDataPath = "ZUGFeRD-invoice.xml";
+            report.XmlDataPath = "ZUGFeRD-rechnung.xml";
 
             string additionalMetadata =
                 File.ReadAllText("ZUGFeRD_DocumentInfo.txt") +
@@ -24,7 +24,7 @@ namespace ZUGFeRD_sample {
             };
 
             options.Attachments.Add(new PdfAttachment() {
-                FilePath = "ZUGFeRD-invoice.xml",
+                FilePath = "ZUGFeRD-rechnung.xml",
                 Type = "text/xml",
                 Description = "Rechnungsdaten im ZUGFeRD-XML-Format",
             });

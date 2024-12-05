@@ -1,4 +1,4 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ZUGFeRD_sample", "ZUGFeRD_sample\ZUGFeRD_sample.vbproj", "{65562E86-1EA2-4B9D-9CA4-85871500608B}"
 EndProject

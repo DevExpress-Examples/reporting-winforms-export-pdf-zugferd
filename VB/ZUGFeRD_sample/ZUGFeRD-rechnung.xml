@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:CrossIndustryInvoice xmlns:rsm="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100" xmlns:qdt="urn:un:unece:uncefact:data:standard:QualifiedDataType:100" xmlns:ram="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100">
+	<rsm:ExchangedDocumentContext>
+		<ram:GuidelineSpecifiedDocumentContextParameter>
+			<ram:ID>urn:cen.eu:en16931:2017#compliant#urn:factur-x.eu:1p0:basic</ram:ID>
+		</ram:GuidelineSpecifiedDocumentContextParameter>
+	</rsm:ExchangedDocumentContext>
+	<rsm:ExchangedDocument>
+		<ram:ID>RK21012345</ram:ID>
+		<ram:TypeCode>384</ram:TypeCode>
+		<ram:IssueDateTime>
+			<udt:DateTimeString format="102">20241115</udt:DateTimeString>
+		</ram:IssueDateTime>
+		<ram:IncludedNote>
+			<ram:Content>Es bestehen Rabatt- oder Bonusvereinbarungen.</ram:Content>
+		</ram:IncludedNote>
+		<ram:IncludedNote>
+			<ram:Content>
+				MUSTERLIEFERANT GMBH
+				BAHNHOFSTRASSE 99
+				99199 MUSTERHAUSEN
+				Geschäftsführung:
+				Max Mustermann
+				USt-IdNr: DE123456789
+				Telefon: +49 932 431 0
+				www.musterlieferant.de
+				HRB Nr. 372876
+				Amtsgericht Musterstadt
+				GLN 4304171000002
+			</ram:Content>
+		</ram:IncludedNote>
+		<ram:IncludedNote>
+			<ram:Content>
+				Bei Rückfragen:
+				Telefon: +49 932 431 500
+				E-Mail : max.muster@musterlieferant.de
+			</ram:Content>
+		</ram:IncludedNote>
+		<ram:IncludedNote>
+			<ram:Content>
+				Warenempfänger
+				GLN 430417088093
+				MUSTER-MARKT
+
+				HAUPTSTRASSE 44
+				31157 SARSTEDT
+
+				Abteilung : 8211
+			</ram:Content>
+		</ram:IncludedNote>
+		<ram:IncludedNote>
+			<ram:Content>
+				Bestell-Nr         : B123456789
+				Bestell-Datum      : 01.11.2024
+
+				Lieferschein-Nr    : L87654321012345
+				Lieferschein-Datum : 14.11.2024
+				Ursprungsbeleg-Nr  : R87654321012345
+				Reklamationsnummer : REKLA-2024-235
+			</ram:Content>
+		</ram:IncludedNote>
+		<ram:IncludedNote>
+			<ram:Content>
+				Rechnungsempfänger
+				GLN 4304171000002
+				MUSTER-KUNDE GMBH
+
+				KUNDENWEG 88
+				40235 DUESSELDORF
+				Kunden-Nr. : 009420
+			</ram:Content>
+		</ram:IncludedNote>
+	</rsm:ExchangedDocument>
+	<rsm:SupplyChainTradeTransaction>
+
+		<ram:IncludedSupplyChainTradeLineItem>
+			<ram:AssociatedDocumentLineDocument>
+				<ram:LineID>1</ram:LineID>
+			</ram:AssociatedDocumentLineDocument>
+			<ram:SpecifiedTradeProduct>
+				<ram:Name>
+					GTIN 4123456000014
+					Art-Nr-Lieferant ZS9997
+					Zitronensäure 100ml
+					Verpackung: Flasche
+					VKE/Geb: 1
+				</ram:Name>
+			</ram:SpecifiedTradeProduct>
+			<ram:SpecifiedLineTradeAgreement>
+				<ram:NetPriceProductTradePrice>
+					<ram:ChargeAmount>1.00</ram:ChargeAmount>
+				</ram:NetPriceProductTradePrice>
+			</ram:SpecifiedLineTradeAgreement>
+			<ram:SpecifiedLineTradeDelivery>
+				<ram:BilledQuantity unitCode="H87">5</ram:BilledQuantity>
+			</ram:SpecifiedLineTradeDelivery>
+			<ram:SpecifiedLineTradeSettlement>
+				<ram:ApplicableTradeTax>
+					<ram:TypeCode>VAT</ram:TypeCode>
+					<ram:CategoryCode>S</ram:CategoryCode>
+					<ram:RateApplicablePercent>19.00</ram:RateApplicablePercent>
+				</ram:ApplicableTradeTax>
+				<ram:SpecifiedTradeSettlementLineMonetarySummation>
+					<ram:LineTotalAmount>-5.00</ram:LineTotalAmount>
+				</ram:SpecifiedTradeSettlementLineMonetarySummation>
+			</ram:SpecifiedLineTradeSettlement>
+		</ram:IncludedSupplyChainTradeLineItem>
+		<ram:IncludedSupplyChainTradeLineItem>
+			<ram:AssociatedDocumentLineDocument>
+				<ram:LineID>2</ram:LineID>
+			</ram:AssociatedDocumentLineDocument>
+			<ram:SpecifiedTradeProduct>
+				<ram:Name>
+					GTIN 4123456000021
+					Art-Nr-Lieferant GZ250
+					Gelierzucker Extra 250g
+					Verpackung: Karton
+					VKE/Geb: 1
+				</ram:Name>
+			</ram:SpecifiedTradeProduct>
+			<ram:SpecifiedLineTradeAgreement>
+				<ram:NetPriceProductTradePrice>
+					<ram:ChargeAmount>1.45</ram:ChargeAmount>
+				</ram:NetPriceProductTradePrice>
+			</ram:SpecifiedLineTradeAgreement>
+			<ram:SpecifiedLineTradeDelivery>
+				<ram:BilledQuantity unitCode="C62">2</ram:BilledQuantity>
+			</ram:SpecifiedLineTradeDelivery>
+			<ram:SpecifiedLineTradeSettlement>
+				<ram:ApplicableTradeTax>
+					<ram:TypeCode>VAT</ram:TypeCode>
+					<ram:CategoryCode>S</ram:CategoryCode>
+					<ram:RateApplicablePercent>7.00</ram:RateApplicablePercent>
+				</ram:ApplicableTradeTax>
+				<ram:SpecifiedTradeSettlementLineMonetarySummation>
+					<ram:LineTotalAmount>-2.90</ram:LineTotalAmount>
+				</ram:SpecifiedTradeSettlementLineMonetarySummation>
+			</ram:SpecifiedLineTradeSettlement>
+		</ram:IncludedSupplyChainTradeLineItem>
+		<ram:ApplicableHeaderTradeAgreement>
+			<ram:SellerTradeParty>
+				<ram:Name>
+					GLN 4333741000005
+					Lief-Nr: 549910
+					MUSTERLIEFERANT GMBH
+				</ram:Name>
+				<ram:PostalTradeAddress>
+					<ram:PostcodeCode>99199</ram:PostcodeCode>
+					<ram:LineOne>BAHNHOFSTRASSE 99</ram:LineOne>
+					<ram:CityName>MUSTERHAUSEN</ram:CityName>
+					<ram:CountryID>DE</ram:CountryID>
+				</ram:PostalTradeAddress>
+				<ram:SpecifiedTaxRegistration>
+					<ram:ID schemeID="VA">DE123456789</ram:ID>
+				</ram:SpecifiedTaxRegistration>
+			</ram:SellerTradeParty>
+			<ram:BuyerTradeParty>
+				<ram:Name>
+					GLN 4304171000002
+					Kunden-Nr. : 009420
+					MUSTER-KUNDE GMBH
+				</ram:Name>
+				<ram:PostalTradeAddress>
+					<ram:PostcodeCode>40235</ram:PostcodeCode>
+					<ram:LineOne>KUNDENWEG 88</ram:LineOne>
+					<ram:CityName>DUESSELDORF</ram:CityName>
+					<ram:CountryID>DE</ram:CountryID>
+				</ram:PostalTradeAddress>
+			</ram:BuyerTradeParty>
+		</ram:ApplicableHeaderTradeAgreement>
+		<ram:ApplicableHeaderTradeDelivery>
+			<ram:ActualDeliverySupplyChainEvent>
+				<ram:OccurrenceDateTime>
+					<udt:DateTimeString format="102">20241114</udt:DateTimeString>
+				</ram:OccurrenceDateTime>
+			</ram:ActualDeliverySupplyChainEvent>
+		</ram:ApplicableHeaderTradeDelivery>
+		<ram:ApplicableHeaderTradeSettlement>
+			<ram:InvoiceCurrencyCode>EUR</ram:InvoiceCurrencyCode>
+			<ram:ApplicableTradeTax>
+				<ram:CalculatedAmount>-0.92</ram:CalculatedAmount>
+				<ram:TypeCode>VAT</ram:TypeCode>
+				<ram:BasisAmount>-4.85</ram:BasisAmount>
+				<ram:CategoryCode>S</ram:CategoryCode>
+				<ram:RateApplicablePercent>19.00</ram:RateApplicablePercent>
+			</ram:ApplicableTradeTax>
+			<ram:ApplicableTradeTax>
+				<ram:CalculatedAmount>-0.20</ram:CalculatedAmount>
+				<ram:TypeCode>VAT</ram:TypeCode>
+				<ram:BasisAmount>-2.82</ram:BasisAmount>
+				<ram:CategoryCode>S</ram:CategoryCode>
+				<ram:RateApplicablePercent>7.00</ram:RateApplicablePercent>
+			</ram:ApplicableTradeTax>
+			<ram:SpecifiedTradeAllowanceCharge>
+				<ram:ChargeIndicator>
+					<udt:Indicator>false</udt:Indicator>
+				</ram:ChargeIndicator>
+				<ram:ActualAmount>-0.15</ram:ActualAmount>
+				<ram:Reason>Rechnungsrabatt</ram:Reason>
+				<ram:CategoryTradeTax>
+					<ram:TypeCode>VAT</ram:TypeCode>
+					<ram:CategoryCode>S</ram:CategoryCode>
+					<ram:RateApplicablePercent>19</ram:RateApplicablePercent>
+				</ram:CategoryTradeTax>
+			</ram:SpecifiedTradeAllowanceCharge>
+			<ram:SpecifiedTradeAllowanceCharge>
+				<ram:ChargeIndicator>
+					<udt:Indicator>false</udt:Indicator>
+				</ram:ChargeIndicator>
+				<ram:ActualAmount>-0.08</ram:ActualAmount>
+				<ram:Reason>Rechnungsrabatt</ram:Reason>
+				<ram:CategoryTradeTax>
+					<ram:TypeCode>VAT</ram:TypeCode>
+					<ram:CategoryCode>S</ram:CategoryCode>
+					<ram:RateApplicablePercent>7</ram:RateApplicablePercent>
+				</ram:CategoryTradeTax>
+			</ram:SpecifiedTradeAllowanceCharge>
+			<ram:SpecifiedTradeSettlementHeaderMonetarySummation>
+				<ram:LineTotalAmount>-7.90</ram:LineTotalAmount>
+				<ram:ChargeTotalAmount>0.00</ram:ChargeTotalAmount>
+				<ram:AllowanceTotalAmount>-0.23</ram:AllowanceTotalAmount>
+				<ram:TaxBasisTotalAmount>-7.67</ram:TaxBasisTotalAmount>
+				<ram:TaxTotalAmount currencyID="EUR">-1.12</ram:TaxTotalAmount>
+				<ram:GrandTotalAmount>-8.79</ram:GrandTotalAmount>
+				<ram:DuePayableAmount>-8.79</ram:DuePayableAmount>
+			</ram:SpecifiedTradeSettlementHeaderMonetarySummation>
+		</ram:ApplicableHeaderTradeSettlement>
+	</rsm:SupplyChainTradeTransaction>
+</rsm:CrossIndustryInvoice>

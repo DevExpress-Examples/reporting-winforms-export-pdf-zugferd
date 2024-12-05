@@ -24,6 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XtraReport1));
+            DevExpress.XtraReports.UI.XRWatermark xrWatermark1 = new DevExpress.XtraReports.UI.XRWatermark();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -95,8 +96,9 @@
             // 
             // xrTableCell6
             // 
-            this.xrTableCell6.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, resources.GetString("xrTableCell6.DataBindings"))});
+            this.xrTableCell6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[IncludedSupplyChainTradeLineItem_SpecifiedLineTradeDelivery].[SpecifiedLineTrade" +
+                    "Delivery_BilledQuantity].[BilledQuantity_Text]")});
             this.xrTableCell6.Name = "xrTableCell6";
             this.xrTableCell6.StylePriority.UseTextAlignment = false;
             this.xrTableCell6.Text = "#";
@@ -105,10 +107,9 @@
             // 
             // xrTableCell7
             // 
-            this.xrTableCell7.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "SpecifiedSupplyChainTradeTransaction.SpecifiedSupplyChainTradeTransaction_Include" +
-                    "dSupplyChainTradeLineItem.IncludedSupplyChainTradeLineItem_SpecifiedTradeProduct" +
-                    ".Name")});
+            this.xrTableCell7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[IncludedSupplyChainTradeLineItem.IncludedSupplyChainTradeLineItem_SpecifiedTrade" +
+                    "Product.Name]")});
             this.xrTableCell7.Name = "xrTableCell7";
             this.xrTableCell7.StylePriority.UseTextAlignment = false;
             this.xrTableCell7.Text = "Product";
@@ -117,42 +118,43 @@
             // 
             // xrTableCell8
             // 
-            this.xrTableCell8.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, resources.GetString("xrTableCell8.DataBindings"), "{0} %")});
+            this.xrTableCell8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[IncludedSupplyChainTradeLineItem_SpecifiedLineTradeSettlement.SpecifiedLineTrade" +
+                    "Settlement_ApplicableTradeTax.RateApplicablePercent]")});
             this.xrTableCell8.Name = "xrTableCell8";
             this.xrTableCell8.StylePriority.UseTextAlignment = false;
             this.xrTableCell8.Text = "USt";
             this.xrTableCell8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrTableCell8.TextFormatString = "{0} %";
             this.xrTableCell8.Weight = 0.5D;
             // 
             // xrTableCell9
             // 
             this.xrTableCell9.Name = "xrTableCell9";
             this.xrTableCell9.StylePriority.UseTextAlignment = false;
-            this.xrTableCell9.Text = "[IncludedSupplyChainTradeLineItem_SpecifiedSupplyChainTradeAgreement.SpecifiedSup" +
-    "plyChainTradeAgreement_NetPriceProductTradePrice.NetPriceProductTradePrice_Charg" +
-    "eAmount.ChargeAmount_Text] €";
+            this.xrTableCell9.Text = "[IncludedSupplyChainTradeLineItem_SpecifiedLineTradeAgreement.SpecifiedLineTradeA" +
+    "greement_NetPriceProductTradePrice.ChargeAmount] €";
             this.xrTableCell9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.xrTableCell9.Weight = 0.5D;
             // 
             // xrTableCell10
             // 
+            this.xrTableCell10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", resources.GetString("xrTableCell10.ExpressionBindings"))});
             this.xrTableCell10.Name = "xrTableCell10";
             this.xrTableCell10.StylePriority.UseTextAlignment = false;
-            this.xrTableCell10.Text = "[sum!#.00] €";
             this.xrTableCell10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrTableCell10.TextFormatString = "{0:€ 0.00}";
             this.xrTableCell10.Weight = 0.5D;
             // 
             // TopMargin
             // 
-            this.TopMargin.HeightF = 100F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // BottomMargin
             // 
-            this.BottomMargin.HeightF = 100F;
             this.BottomMargin.Name = "BottomMargin";
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -246,14 +248,14 @@
             this.xrLabel9.Name = "xrLabel9";
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel9.SizeF = new System.Drawing.SizeF(629.9999F, 33F);
-            this.xrLabel9.Text = "Rechnung # [HeaderExchangedDocument.ID] vom [HeaderExchangedDocument.HeaderExchan" +
-    "gedDocument_IssueDateTime.IssueDateTime_DateTimeString.cfDateTime!d]";
+            this.xrLabel9.Text = "Rechnung # [ExchangedDocument.ID] vom [ExchangedDocument.ExchangedDocument_IssueD" +
+    "ateTime.IssueDateTime_DateTimeString.cfDateTime!d]";
             // 
             // xrLabel7
             // 
-            this.xrLabel7.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "ApplicableSupplyChainTradeAgreement.ApplicableSupplyChainTradeAgreement_SellerTra" +
-                    "deParty.SellerTradeParty_PostalTradeAddress.PostcodeCode")});
+            this.xrLabel7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ApplicableHeaderTradeAgreement.ApplicableHeaderTradeAgreement_SellerTradeParty.S" +
+                    "ellerTradeParty_PostalTradeAddress.PostcodeCode]")});
             this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(356.6667F, 93.70833F);
             this.xrLabel7.Name = "xrLabel7";
             this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -262,9 +264,9 @@
             // 
             // xrLabel8
             // 
-            this.xrLabel8.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "ApplicableSupplyChainTradeAgreement.ApplicableSupplyChainTradeAgreement_SellerTra" +
-                    "deParty.SellerTradeParty_PostalTradeAddress.CityName")});
+            this.xrLabel8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ApplicableHeaderTradeAgreement.ApplicableHeaderTradeAgreement_SellerTradeParty.S" +
+                    "ellerTradeParty_PostalTradeAddress.CityName]")});
             this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(468.5417F, 93.70833F);
             this.xrLabel8.Name = "xrLabel8";
             this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -273,9 +275,9 @@
             // 
             // xrLabel6
             // 
-            this.xrLabel6.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "ApplicableSupplyChainTradeAgreement.ApplicableSupplyChainTradeAgreement_SellerTra" +
-                    "deParty.SellerTradeParty_PostalTradeAddress.LineOne")});
+            this.xrLabel6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ApplicableHeaderTradeAgreement.ApplicableHeaderTradeAgreement_SellerTradeParty.S" +
+                    "ellerTradeParty_PostalTradeAddress.LineOne]")});
             this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(357.9166F, 56.20832F);
             this.xrLabel6.Name = "xrLabel6";
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -284,9 +286,9 @@
             // 
             // xrLabel5
             // 
-            this.xrLabel5.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "ApplicableSupplyChainTradeAgreement.ApplicableSupplyChainTradeAgreement_SellerTra" +
-                    "deParty.Name")});
+            this.xrLabel5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ApplicableHeaderTradeAgreement.ApplicableHeaderTradeAgreement_SellerTradeParty.N" +
+                    "ame]")});
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(357.9166F, 10.00001F);
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -295,9 +297,9 @@
             // 
             // xrLabel4
             // 
-            this.xrLabel4.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "ApplicableSupplyChainTradeAgreement.ApplicableSupplyChainTradeAgreement_BuyerTrad" +
-                    "eParty.BuyerTradeParty_PostalTradeAddress.CityName")});
+            this.xrLabel4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ApplicableHeaderTradeAgreement.ApplicableHeaderTradeAgreement_BuyerTradeParty.Bu" +
+                    "yerTradeParty_PostalTradeAddress.CityName]")});
             this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(121.875F, 93.70833F);
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -306,9 +308,9 @@
             // 
             // xrLabel3
             // 
-            this.xrLabel3.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "ApplicableSupplyChainTradeAgreement.ApplicableSupplyChainTradeAgreement_BuyerTrad" +
-                    "eParty.BuyerTradeParty_PostalTradeAddress.PostcodeCode")});
+            this.xrLabel3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ApplicableHeaderTradeAgreement.ApplicableHeaderTradeAgreement_BuyerTradeParty.Bu" +
+                    "yerTradeParty_PostalTradeAddress.PostcodeCode]")});
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 93.70833F);
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -317,9 +319,9 @@
             // 
             // xrLabel2
             // 
-            this.xrLabel2.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "ApplicableSupplyChainTradeAgreement.ApplicableSupplyChainTradeAgreement_BuyerTrad" +
-                    "eParty.BuyerTradeParty_PostalTradeAddress.LineOne")});
+            this.xrLabel2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ApplicableHeaderTradeAgreement.ApplicableHeaderTradeAgreement_BuyerTradeParty.Bu" +
+                    "yerTradeParty_PostalTradeAddress.LineOne]")});
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 56.20832F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -328,9 +330,9 @@
             // 
             // xrLabel1
             // 
-            this.xrLabel1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "ApplicableSupplyChainTradeAgreement.ApplicableSupplyChainTradeAgreement_BuyerTrad" +
-                    "eParty.Name")});
+            this.xrLabel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ApplicableHeaderTradeAgreement.ApplicableHeaderTradeAgreement_BuyerTradeParty.Na" +
+                    "me]")});
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 10.00001F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -339,21 +341,19 @@
             // 
             // cfDateTime
             // 
-            this.cfDateTime.DataMember = "HeaderExchangedDocument.HeaderExchangedDocument_IssueDateTime.IssueDateTime_DateT" +
-    "imeString";
+            this.cfDateTime.DataMember = "ExchangedDocument.ExchangedDocument_IssueDateTime.IssueDateTime_DateTimeString";
             this.cfDateTime.Expression = resources.GetString("cfDateTime.Expression");
             this.cfDateTime.Name = "cfDateTime";
             // 
             // ApplicablePersent_num
             // 
-            this.ApplicablePersent_num.DataMember = resources.GetString("ApplicablePersent_num.DataMember");
-            this.ApplicablePersent_num.Expression = "ToDouble([ApplicablePercent])";
+            this.ApplicablePersent_num.Expression = "ToDouble([RateApplicablePercent])";
             this.ApplicablePersent_num.Name = "ApplicablePersent_num";
             // 
             // sum
             // 
-            this.sum.DataMember = "SpecifiedSupplyChainTradeTransaction.SpecifiedSupplyChainTradeTransaction_Include" +
-    "dSupplyChainTradeLineItem";
+            this.sum.DataMember = "SupplyChainTradeTransaction.SupplyChainTradeTransaction_IncludedSupplyChainTradeL" +
+    "ineItem";
             this.sum.Expression = resources.GetString("sum.Expression");
             this.sum.Name = "sum";
             // 
@@ -368,9 +368,12 @@
             this.cfDateTime,
             this.ApplicablePersent_num,
             this.sum});
-            this.DataMember = "SpecifiedSupplyChainTradeTransaction.SpecifiedSupplyChainTradeTransaction_Include" +
-    "dSupplyChainTradeLineItem";
-            this.Version = "14.2";
+            this.DataMember = "SupplyChainTradeTransaction.SupplyChainTradeTransaction_IncludedSupplyChainTradeL" +
+    "ineItem";
+            this.Version = "24.2";
+            xrWatermark1.Id = "Watermark1";
+            this.Watermarks.AddRange(new DevExpress.XtraPrinting.Drawing.Watermark[] {
+            xrWatermark1});
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
