@@ -16,42 +16,58 @@
 			MyBase.Dispose(disposing)
 		End Sub
 
-		#Region "Windows Form Designer generated code"
+#Region "Windows Form Designer generated code"
 
 		''' <summary>
 		''' Required method for Designer support - do not modify
 		''' the contents of this method with the code editor.
 		''' </summary>
 		Private Sub InitializeComponent()
-			Me.button1 = New System.Windows.Forms.Button()
+			Me.ButtonExportFacturX = New System.Windows.Forms.Button()
+			Me.ButtonExportZugferd = New System.Windows.Forms.Button()
 			Me.SuspendLayout()
-			' 
-			' button1
-			' 
-			Me.button1.Location = New System.Drawing.Point(60, 44)
-			Me.button1.Name = "button1"
-			Me.button1.Size = New System.Drawing.Size(150, 65)
-			Me.button1.TabIndex = 0
-			Me.button1.Text = "Export"
-			Me.button1.UseVisualStyleBackColor = True
-'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
-'ORIGINAL LINE: this.button1.Click += new System.EventHandler(this.button1_Click);
-			' 
-			' Form1
-			' 
-			Me.AutoScaleDimensions = New System.Drawing.SizeF(6F, 13F)
+			'
+			'ButtonExportFacturX
+			'
+			Me.ButtonExportFacturX.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+			Me.ButtonExportFacturX.Location = New System.Drawing.Point(13, 124)
+			Me.ButtonExportFacturX.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+			Me.ButtonExportFacturX.Name = "ButtonExportFacturX"
+			Me.ButtonExportFacturX.Size = New System.Drawing.Size(418, 100)
+			Me.ButtonExportFacturX.TabIndex = 1
+			Me.ButtonExportFacturX.Text = "French Specific"
+			Me.ButtonExportFacturX.UseVisualStyleBackColor = True
+			'
+			'ButtonExportZugferd
+			'
+			Me.ButtonExportZugferd.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+			Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+			Me.ButtonExportZugferd.Location = New System.Drawing.Point(13, 14)
+			Me.ButtonExportZugferd.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+			Me.ButtonExportZugferd.Name = "ButtonExportZugferd"
+			Me.ButtonExportZugferd.Size = New System.Drawing.Size(418, 100)
+			Me.ButtonExportZugferd.TabIndex = 0
+			Me.ButtonExportZugferd.Text = "German Specific"
+			Me.ButtonExportZugferd.UseVisualStyleBackColor = True
+			'
+			'Form1
+			'
+			Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
 			Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-			Me.ClientSize = New System.Drawing.Size(292, 172)
-			Me.Controls.Add(Me.button1)
+			Me.ClientSize = New System.Drawing.Size(444, 238)
+			Me.Controls.Add(Me.ButtonExportFacturX)
+			Me.Controls.Add(Me.ButtonExportZugferd)
+			Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
 			Me.Name = "Form1"
 			Me.Text = "ZUGFeRD Report Example"
 			Me.ResumeLayout(False)
 
 		End Sub
+		Private WithEvents ButtonExportFacturX As Button
+		Private WithEvents ButtonExportZugferd As Button
 
-		#End Region
-
-		Private WithEvents button1 As System.Windows.Forms.Button
+#End Region
 	End Class
 End Namespace
 
