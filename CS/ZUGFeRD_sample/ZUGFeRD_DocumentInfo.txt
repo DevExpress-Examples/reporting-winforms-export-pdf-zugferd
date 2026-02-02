@@ -1,6 +1,0 @@
-﻿<rdf:Description xmlns:zf="urn:ferd:pdfa:invoice:rc#" rdf:about="">
-<zf:DocumentType>INVOICE</zf:DocumentType>
-<zf:DocumentFileName>ZUGFeRD-rechnung.xml</zf:DocumentFileName>
-<zf:Version>RC</zf:Version>
-<zf:ConformanceLevel>PdfAssociatedFileRelationship.Data</zf:ConformanceLevel>
-</rdf:Description>
