@@ -20,10 +20,10 @@ See the following specification for additional information about ZUGFeRD standar
 
 When you click the "German Specific" button, the application does the following:
 
-•	Loads two metadata fragments and concatenates them into `AdditionalMetadata`.
-•	Sets **PDF/A-3b** compliance.
-•	Attaches the `xrechnung.xml` file with the `Alternative` relationship.
-•	Exports the report to PDF and opens the resulting PDF.
+-	Loads two metadata fragments and concatenates them into `AdditionalMetadata`.
+-	Sets **PDF/A-3b** compliance.
+-	Attaches the `xrechnung.xml` file with the `Alternative` relationship.
+-	Exports the report to PDF and opens the resulting PDF.
 
 ```cs
 using System;
@@ -105,10 +105,10 @@ void ButtonExportGermany_Click(object sender, EventArgs e) {
 
 When you click the "French Specific" button, the application does the following:
 
-•	Loads two metadata fragments and concatenates them into `AdditionalMetadata`.
-•	Sets PDF/A-3b compliance.
-•	Attaches the `factur-x.xml` file with the `Data` relationship (Factur-X 1.0x spec).
-•	Exports the report and opens the resulting PDF.
+-	Loads two metadata fragments and concatenates them into `AdditionalMetadata`.
+-	Sets PDF/A-3b compliance.
+-	Attaches the `factur-x.xml` file with the `Data` relationship (Factur-X 1.0x spec).
+-	Exports the report and opens the resulting PDF.
 
 ```cs
 using System;
@@ -192,7 +192,7 @@ File to Review:
 
 ## Files to Review
 
-* [Form1.cs](./CS/ZUGFeRD_sample/Form1.cs) (VB: [Form1.vb](./VB/ZUGFeRD_sample/Form1.vb))
+- [Form1.cs](./CS/ZUGFeRD_sample/Form1.cs) (VB: [Form1.vb](./VB/ZUGFeRD_sample/Form1.vb))
 - [factur-x.xml](./CS/ZUGFeRD_sample/French/factur-x.xml) (VB: [factur-x.xml](./VB/ZUGFeRD_sample/French/factur-x.xml))
 - [ZUGFeRD_DocumentInfo.txt](./CS/ZUGFeRD_sample/French/ZUGFeRD_DocumentInfo.txt) (VB: [ZUGFeRD_DocumentInfo.txt](./VB/ZUGFeRD_sample/French/ZUGFeRD_DocumentInfo.txt))
 - [ZUGFeRD_PdfASchema.txt](./CS/ZUGFeRD_sample/French/ZUGFeRD_PdfASchema.txt) (VB: [ZUGFeRD_PdfASchema.txt](./VB/ZUGFeRD_sample/French/ZUGFeRD_PdfASchema.txt))
@@ -224,3 +224,4 @@ File to Review:
 
 (you will be redirected to DevExpress.com to submit your response)
 <!-- feedback end -->
+
