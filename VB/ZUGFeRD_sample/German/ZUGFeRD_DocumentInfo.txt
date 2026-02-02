@@ -1,6 +1,0 @@
-﻿<rdf:Description xmlns:fx="urn:factur-x:pdfa:CrossIndustryDocument:invoice:1p0#" rdf:about="">
-      <fx:DocumentType>INVOICE</fx:DocumentType>
-      <fx:DocumentFileName>xrechnung.xml</fx:DocumentFileName>
-      <fx:Version>3.0</fx:Version>
-      <fx:ConformanceLevel>XRECHNUNG</fx:ConformanceLevel>
-</rdf:Description>
