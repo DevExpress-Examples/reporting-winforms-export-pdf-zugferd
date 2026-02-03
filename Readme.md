@@ -5,7 +5,7 @@
 <!-- default badges end -->
 # Reports for WinForms - Export a Report to ZUGFeRD (XRechnung and Factur-X)
 
-This example exports a DevExpress report to a PDF/A-3b (ISO 19005-3) document and embeds an electronic invoice (e-invoice) XML file. The the resulting PDF complies with ZUGFeRD requirements and can be validated as one of the following formats:
+This example exports a DevExpress report to a PDF/A-3b (ISO 19005-3) document and embeds an electronic invoice (e-invoice) XML file. The resulting PDF complies with ZUGFeRD requirements and can be validated as one of the following formats:
 
 - German e-invoice: XRechnung (ZUGFeRD container)
 - French e-invoice: Factur-X (ZUGFeRD container)
@@ -73,15 +73,15 @@ void ButtonExportGermany_Click(object sender, EventArgs e) {
 
 - [xrechnung.xml](./CS/ZUGFeRD_sample/German/xrechnung.xml)
 
-    UN/CEFACT Cross Industry Invoice payload compliant with the German XRechnung profile. The report uses this file as its data source.
+    The UN/CEFACT Cross Industry Invoice payload is compliant with the German XRechnung profile. The report uses this file as its data source.
 
 - [ZUGFeRD_DocumentInfo.txt](./CS/ZUGFeRD_sample/German/ZUGFeRD_DocumentInfo.txt)
 
-    XMP RDF fragment that contains ZUGFeRD/XRechnung metadata for the PDF document.
+    The XMP RDF fragment that contains ZUGFeRD/XRechnung metadata for the PDF document.
 
 - [ZUGFeRD_PdfASchema.txt](./CS/ZUGFeRD_sample/German/ZUGFeRD_PdfASchema.txt)
 
-    XMP PDF/A extension schema that defines the `fx` namespace and its properties. The schema ensures that PDF/A validation correctly interprets `fx:*` fields defined in _ZUGFeRD_DocumentInfo.txt_.
+    The XMP PDF/A extension schema that defines the `fx` namespace and its properties. The schema ensures that PDF/A validation correctly interprets `fx:*` fields defined in _ZUGFeRD_DocumentInfo.txt_.
 
 #### Supported Standards (German Invoices)
 
@@ -165,7 +165,7 @@ File to Review:
 
 - [ZUGFeRD_DocumentInfo.txt](./CS/ZUGFeRD_sample/French/ZUGFeRD_DocumentInfo.txt)
 
-    XMP RDF fragment that contains Factur-X-specific metadata for the PDF document.
+    The XMP RDF fragment that contains Factur-X-specific metadata for the PDF document.
 
 - [ZUGFeRD_PdfASchema.txt](./CS/ZUGFeRD_sample/French/ZUGFeRD_PdfASchema.txt)
 
