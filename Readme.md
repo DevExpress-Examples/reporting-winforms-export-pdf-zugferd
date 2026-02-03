@@ -169,7 +169,7 @@ File to Review:
 
 - [ZUGFeRD_PdfASchema.txt](./CS/ZUGFeRD_sample/French/ZUGFeRD_PdfASchema.txt)
 
-    PDF/A extension schema used by Factur-X in XMP. The schema ensures that PDF/A validation correctly interprets `fx:*` fields defined in _ZUGFeRD_DocumentInfo.txt_.
+    The PDF/A extension schema used by Factur-X in XMP. The schema ensures that PDF/A validation correctly interprets `fx:*` fields defined in _ZUGFeRD_DocumentInfo.txt_.
 
 #### Supported Standards (French Invoices)
 
