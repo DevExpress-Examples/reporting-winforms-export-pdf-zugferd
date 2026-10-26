@@ -15,7 +15,7 @@ This example exports a DevExpress report to a PDF/A-3b (ISO 19005-3) document an
 
 The project includes standards-compliant sample XML files and XMP metadata for German (XRechnung) and French (Factur-X) e-invoice formats. Although both formats rely on the ZUGFeRD container, each country requires specific configuration settings (such as the PDF attachment relationship, the embedded XML file name, and required XMP metadata fields).
 
-See the following specification for additional information about ZUGFeRD standarts: [What is ZUGFeRD / Factur-X?](https://www.ferd-net.de/en/standards/zugferd/factur-x)
+See the following specification for additional information about ZUGFeRD standarts: [What is ZUGFeRD / Factur-X?](https://www.ferd-net.de/standards/zugferd)
 
 ### Export to ZUGFeRD (Germany)
 
